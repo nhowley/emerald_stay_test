@@ -5,7 +5,7 @@ import ShowProperties from '../ShowProperties'
 const Dashboard = (props) => {
   return(
   <div className ="property-page">
-      <ShowProperties />
+      <ShowProperties properties={props.properties}/>
   </div>
 )};
 
