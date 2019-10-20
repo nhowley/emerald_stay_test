@@ -4,24 +4,29 @@ import Dashboard from './layout/Dashboard'
 
 
 class Homepage extends Component {
-  state={
+  state = {
+    properties: []
   }
 
-  // componentDidMount() {
-  //   this.getProducts();
-  // }
+  componentDidMount() {
+    this.getSearchResults();
+  }
 
-  // //Get all products from api an add to products array
-  // getProducts = () => {
-  //   axios.get('https://api.musement.com/api/v3/venues/164/activities?limit=8&offset=0')
-  //     .then((res) => { this.setState({products: res.data})})
-  //     .then(() =>{this.setProductsPerPage()})
-  // };
+  //Get all products from api an add to products array
+  getSearchResults = () => {
+    axios.get('https://api.emerald-stay.fr/api/properties?country=1&adults=1&children=0&page=1')
+      .then((res) => { this.setState({properties: res.data.data.properties})})
+  };
+
+  getProperties = () =>{
+    console.log(this.state.properties)
+  }
 
     render() {
     return (
       <div>
-        <Dashboard />
+        <Dashboard properties={this.state.properties}/>
+        <button onClick={this.getProperties}>Get properties</button>
       </div>
     );
   }
