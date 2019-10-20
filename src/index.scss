@@ -1,0 +1,53 @@
+  @import "partials/media-queries";
+
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1240px;
+    padding: 0 40px;
+    margin: 0 auto;
+  }
+  /* ==========================================================================
+   Property List
+   ========================================================================== */
+
+  .property-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @media #{$md-up} {
+      flex-direction: row;
+      flex: 0 1 auto;
+      flex-flow: row wrap;
+      margin: 0 -10px;
+    }
+  }
+
+  .property-list__item {
+    padding-top: 20px;
+
+    @media #{$md-up} {
+      max-width: 50%;
+      padding: 10px;
+    }
+
+    @media #{$lg-up} {
+      padding: 10px;
+      flex: 1 0 33.3333%;
+      max-width: 33.3333%;
+    }
+  }
+
+
