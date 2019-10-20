@@ -20,7 +20,7 @@ return(
             <div className="price" itemScope itemType="http://schema.org/Offer">
               from &euro;{property.property_price}/night
             </div>
-            <button className="book_now">Book Now</button>
+            <button className="button button--primary">Book Now</button>
         </div>
     </article>
   )

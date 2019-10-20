@@ -81,8 +81,8 @@
   }
 
   .button {
+    max-width :150px;
     border: 1px solid #d9d9d9;
-    border-radius: 100px;
     background-color: #ffffff;
     outline: none;
 
@@ -98,16 +98,16 @@
   .button--primary {
     padding: 13px;
 
-    font-family: 'Lato-Bold', sans-serif;
-    font-size: 13px;
+    font-weight:bold;
+    font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 1.39px;
   }
 
   .button--primary:hover {
-    border: 1px solid #444A59;
-    color: #ffffff;
-    background-color: #444A59;
+    border: 1px solid black;
+    color: black;
+    background-color: #ffdf2d;
   }
 
   .button--topPicks:hover {
@@ -116,11 +116,6 @@
 
   .button--topPicks:hover>.icon {
     fill: #444A59;
-  }
-
-  .button--in-cart {
-    pointer-events: none;
-    background-color: #d9d9d9;
   }
 
 
