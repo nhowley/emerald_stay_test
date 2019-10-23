@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import TopPickIcon from './Icons/TopPickIcon';
 import ImageSlider from './ImageSlider'
 
@@ -6,7 +6,6 @@ import ImageSlider from './ImageSlider'
 const Property = ({property, addToTopPicks, removeFromTopPicks}) => {
 const [topPicksFill, setTopPicksFill] = useState('#d9d9d9');
 const [addedToTopPicks, updateTopPicks] = useState(false);
-
 
 //Add or remove item from topPicks
 const toggleTopPicks = (property) => {
@@ -29,7 +28,7 @@ return(
           <p className="subtitle" itemProp="subtitle">{property.city}</p>
           <div className="rooms_book">
             <div>
-              <p className="rooms" itemProp="numberOfRooms">{property.beds_adults} beds, {property.number_of_bedrooms} bedrooms</p>
+              <p className="rooms" itemProp="numberOfRooms">{property.beds_adults > 0 ? `${property.beds_adults} beds, ` : ""} {property.number_of_bedrooms} bedrooms</p>
               <div className="price" itemScope itemType="http://schema.org/Offer">
                 from <span>&euro;{property.property_price}</span>/night
               </div>

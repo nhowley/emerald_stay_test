@@ -20,9 +20,6 @@ class Homepage extends Component {
       .then((res) => { this.setState({properties: res.data.data.properties})})
   };
 
-  getProperties = () =>{
-    console.log(this.state.properties)
-  }
 
   //add product to topPicks when you click on topPicks Icon
   addToTopPicks = (topPicksIcon) => {
@@ -44,15 +41,34 @@ class Homepage extends Component {
     console.log(newTotalItems)
   }
 
+  //sort properties by price (lowest to highest)
+  sortLowtoHigh = () =>{
+    console.log("sort properties reached")
+    const newPropertyList = this.state.properties.sort((a, b) => (a.property_price > b.property_price) ? 1 : -1)
+    this.setState({
+      properties: newPropertyList
+    })
+  }
+
+  sortHightoLow = () => {
+    console.log("sort properties reached")
+    const newPropertyList = this.state.properties.sort((a, b) => (a.property_price > b.property_price) ? -1 : 1)
+    this.setState({
+      properties: newPropertyList
+    })
+  }
+
     render() {
     return (
       <div>
-        <Header topPicksTotalItems={this.state.topPicksTotalItems}/>
+        <Header 
+        topPicksTotalItems={this.state.topPicksTotalItems}
+        sortLowtoHigh={this.sortLowtoHigh}
+        sortHightoLow={this.sortHightoLow}/>
         <Dashboard 
         properties={this.state.properties}
         addToTopPicks={this.addToTopPicks}
         removeFromTopPicks={this.removeFromTopPicks}/>
-        <button onClick={this.getProperties}>Get properties</button>
       </div>
     );
   }
