@@ -1,14 +1,16 @@
 import React from 'react'
 import TopPickIcon from './Icons/TopPickIcon';
+import ImageSlider from './ImageSlider'
 
 const Property = ({property}) => {
 
 return(
     <article className="property" itemtype="http://schema.org/HotelRoom http://schema.org/Product">
         <figure className="image-wrapper">
-            <img src = {property.open_graph_image}
+            {/* <img src = {property.open_graph_image}
             className = "image"
-            alt = "property" />
+            alt = "property" /> */}
+            <ImageSlider property={property}/>
             <button className="topPicks-button button button--round button--topPicks">
               <TopPickIcon fill="black"/>
             </button>
@@ -18,7 +20,7 @@ return(
             <p className="subtitle" itemProp="subtitle">{property.city}</p>
             <p className="rooms" itemProp="numberOfRooms">{property.beds_adults} adult beds, {property.number_of_bedrooms} bedrooms</p>
             <div className="price" itemScope itemType="http://schema.org/Offer">
-              from &euro;{property.property_price}/night
+              from <span>&euro;{property.property_price}/night</span>
             </div>
             <button className="button button--primary">Book Now</button>
         </div>
