@@ -9,7 +9,10 @@ const ShowProperties = (props) => {
         props.properties ?
           props.properties.map((property, index) => {
           return <li key={index} className="property-list__item"> 
-            <Property property={property}/>
+            <Property 
+            property={property}
+            addToTopPicks={props.addToTopPicks}
+            removeFromTopPicks={props.removeFromTopPicks}/>
         </li>
       })
       : <li>No results</li> 

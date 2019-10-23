@@ -5,7 +5,10 @@ import ShowProperties from '../ShowProperties'
 const Dashboard = (props) => {
   return(
   <div className ="property-page">
-      <ShowProperties properties={props.properties}/>
+      <ShowProperties 
+      properties={props.properties} 
+      addToTopPicks={props.addToTopPicks}
+      removeFromTopPicks={props.removeFromTopPicks}/>
   </div>
 )};
 
