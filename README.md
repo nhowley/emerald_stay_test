@@ -22,6 +22,10 @@ npm install
 npm start
 ```
 
+### To view the fonts, you may need to enable CORS via a Google Chrome extension:
+https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf
+
+
 ### To build app ready for deployment:
 ```
 npm run build
