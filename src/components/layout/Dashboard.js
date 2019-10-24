@@ -1,7 +1,7 @@
 import React from 'react';
-import ShowProperties from '../ShowProperties'
+import ShowProperties from '../property/ShowProperties'
 
-//Dashboard is the central area for products - we need two components- products and pagination
+//Dashboard is the central area for properties
 const Dashboard = (props) => {
   return(
   <div className ="property-page">

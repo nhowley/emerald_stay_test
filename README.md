@@ -14,6 +14,7 @@ cd tech_test_Natalie
 
 ```
 npm install
+npm install node-sass
 ```
 
 
