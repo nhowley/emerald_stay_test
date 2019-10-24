@@ -85,8 +85,8 @@
     /* Font smoothing tweaks for MacOSx in Gecko */
     -webkit-font-smoothing: antialiased;
 
-    color: #444A59;
-    background-color: #f8f8f8;
+    color: black;
+    background-color: #efefef;
   }
 
   * {
@@ -126,8 +126,11 @@
   .container {
     width: 100%;
     max-width: 1240px;
-    padding: 0 40px;
+    padding: 0 20px;
     margin: 0 auto;
+    @media #{$md-up}{
+      padding: 0 40px;
+    }
   }
 
   .flex{
@@ -140,6 +143,18 @@
 
   .flex-col{
     flex-direction: column;
+  }
+
+  @media #{$md-down}{
+    .tablet-mobile-only{
+      display: none;
+    }
+  }
+
+  @media #{$md-up}{
+  .mobile-only{
+      display: none;
+    }
   }
   /* ==========================================================================
    Buttons
@@ -183,10 +198,7 @@
 
   .button--topPicks:hover {
     border: 1px solid black;
-  }
-
-  .button--topPicks:hover>.icon {
-    fill: black;
+    cursor: pointer;
   }
 
   /* ==========================================================================
@@ -202,7 +214,8 @@
   .page-title {
     font-size: 20px;
   }
-  
+
+
   .header-list {
     div, button{
       margin-right:10px;
@@ -226,7 +239,6 @@
 
   .item {
     height: 25px;
-
     display: flex;
     align-items: flex-end;
 
@@ -340,14 +352,14 @@
 
 
   /* ==========================================================================
-   Product Details
+   Property Details
    ========================================================================== */
 
   .details {
     display: flex;
     flex: 1 0 auto;
     flex-direction: column;
-    padding: 0px 20px 20px 20px;
+    padding: 0px 15px 20px 15px;
 
     span {
       font-weight: bold;
@@ -375,7 +387,7 @@
   }
 
   /* ==========================================================================
-   Product actions
+   Property actions
    ========================================================================== */
 
   .topPicks-button {

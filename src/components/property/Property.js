@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import TopPickIcon from './Icons/TopPickIcon';
-import ImageSlider from './ImageSlider'
+import TopPickIcon from '../Icons/TopPickIcon';
+import ImageSlider from '../ImageSlider'
 
 
 const Property = ({property, addToTopPicks, removeFromTopPicks}) => {
@@ -8,7 +8,7 @@ const [topPicksFill, setTopPicksFill] = useState('#d9d9d9');
 const [addedToTopPicks, updateTopPicks] = useState(false);
 
 //Add or remove item from topPicks
-const toggleTopPicks = (property) => {
+const toggleTopPicks = () => {
   addedToTopPicks === false ? addToTopPicks() : removeFromTopPicks();
   addedToTopPicks === true ? setTopPicksFill("#d9d9d9") : setTopPicksFill("black");
 }

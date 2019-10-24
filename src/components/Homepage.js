@@ -50,6 +50,7 @@ class Homepage extends Component {
     })
   }
 
+  //sort properties by price (highest to lowest)
   sortHightoLow = () => {
     console.log("sort properties reached")
     const newPropertyList = this.state.properties.sort((a, b) => (a.property_price > b.property_price) ? -1 : 1)
