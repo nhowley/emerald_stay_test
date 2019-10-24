@@ -169,8 +169,8 @@
 
   .button--primary {
     font-family: Anton,Helvetica Neue,Helvetica,Arial,sans-serif;
-    padding: 0px 13px;
-    font-size: 16px;
+    padding: 0px 11px;
+    font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 1px;
   }
@@ -186,7 +186,7 @@
   }
 
   .button--topPicks:hover>.icon {
-    fill: #444A59;
+    fill: black;
   }
 
   /* ==========================================================================
@@ -202,7 +202,17 @@
   .page-title {
     font-size: 20px;
   }
+  
+  .header-list {
+    div, button{
+      margin-right:10px;
+    }
 
+    button{
+      cursor: pointer;
+      outline: none;
+    }    
+  }
 
   /* ==========================================================================
    TopPicks
@@ -318,12 +328,13 @@
 
   .each-slide {
     max-width: 100%;
-    max-height: 300px;
-    object-fit: contain;
+    max-height: 200px;
+    display: flex;
 
     img{
-      max-width: 100%;
-      max-height: 300px;
+      width: 100%;
+      max-height: 185px;
+      object-fit: cover;
     }
   }
 
@@ -351,8 +362,8 @@
       font-family: Helvetica, Arial, sans-serif;
     }
 
-    .rooms{
-      margin-top: 10px;
+    .rooms, button{
+      margin-top: 20px;
     }
 
     .rooms_book{
